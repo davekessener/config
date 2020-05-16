@@ -1,3 +1,4 @@
+
 git_branch() {
 	branch=$(git branch 2> /dev/null | grep '*' | cut -c3-)
 
@@ -6,7 +7,7 @@ git_branch() {
 	fi
 }
 
-PS1="[\033[01;32m\u@\h\033[00m: \033[01;34m\W\033[00m] $(git_branch)$ "
+PS1='[\033[01;32m\u@\h\033[00m: \033[01;34m\W\033[00m] $(git_branch)$ '
 
 alias ll='ls -AlFh'
 
