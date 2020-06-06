@@ -1,3 +1,8 @@
 #!/bin/bash
-(tmux a || tmux)
+
+if [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; then
+	tmux select-window -t 0
+else
+	(tmux a || tmux)
+fi
 
