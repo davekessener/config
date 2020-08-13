@@ -1,0 +1,33 @@
+<project name="" default="compile">
+	<property name="src.dir" value="src" />
+	<property name="bin.dir" value="bin" />
+	<property name="main.class" value="dave...Main" />
+
+	<path id="classpath">
+	</path>
+
+	<target name="compile">
+		<mkdir dir="${bin.dir}/" />
+		<javac srcdir="${src.dir}/" destdir="${bin.dir}/" classpathref="classpath" />
+	</target>
+
+	<target name="jar" depends="compile">
+		<jar destfile="${ant.project.name}.jar" basedir="${bin.dir}/" />
+	</target>
+
+	<target name="run" depends="jar">
+		<java classname="${main.class}">
+			<classpath>
+				<path refid="classpath" />
+				<path location="${ant.project.name}.jar" />
+			</classpath>
+			<arg value="${args}" />
+		</java>
+	</target>
+
+	<target name="clean">
+		<delete dir="${bin.dir}/" />
+		<delete file="${ant.project.name}.jar" />
+	</target>
+</project>
+
