@@ -7,6 +7,7 @@ set tabstop=4
 set softtabstop=0
 set noexpandtab
 set shiftwidth=4
+set background=dark
 map h :wincmd h<CR>
 map j :wincmd j<CR>
 map k :wincmd k<CR>

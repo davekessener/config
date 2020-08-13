@@ -7,5 +7,5 @@ mkdir -p ~/.ssh
 
 cat < ssh.config >> ~/.ssh/config
 cat < bashrc >> ~/.bashrc
-cat < vimrc >> ~/.vimrc
+cp vimrc ~/.vimrc
 
