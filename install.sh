@@ -9,3 +9,6 @@ cat < ssh.config >> ~/.ssh/config
 cat < bashrc >> ~/.bashrc
 cp vimrc ~/.vimrc
 
+git config --global user.email "davekessener@gmail.com"
+git config --global user.name "Dave Kessener"
+
